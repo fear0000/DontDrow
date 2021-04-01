@@ -7,45 +7,52 @@ public class Character : MonoBehaviour
     [SerializeField] private Animator anim;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float speed;
+    [SerializeField] private float jumpForce;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask whatIsGround;
+    [SerializeField] private float groundRadius;
     private bool isRight = true;
     private bool isGrounded = true;
     private void FixedUpdate()
     {
-        if (Input.GetAxis("Horizontal") > 0 && !isRight)
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
+        anim.SetBool("isGrounded", isGrounded);
+
+        if (Input.GetAxisRaw("Jump") > 0 && isGrounded)
+        {
+            Jump();
+            isGrounded = false;
+        }
+
+        if (Input.GetAxisRaw("Horizontal") > 0 && !isRight)
             Flip();
-        else if (Input.GetAxis("Horizontal") < 0 && isRight)
+        else if (Input.GetAxisRaw("Horizontal") < 0 && isRight)
             Flip();
 
-        if (Input.GetAxis("Horizontal") != 0)
+        if (Input.GetAxisRaw("Horizontal") != 0)
         {
             anim.SetBool("isRun", true);
-            rb.velocity = new Vector2(Input.GetAxis("Horizontal") * speed , rb.velocity.y);
+            rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speed , rb.velocity.y);
         }
         else
         {
             anim.SetBool("isRun", false);
             rb.velocity = new Vector2(0 , rb.velocity.y);
         }
-            
-    }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.tag == "Ground")
-        {
-            anim.SetBool("isGrounded", true);
-        }
-        else
-        {
-            anim.SetBool("isGrounded", false);
-        }
+        
+            
     }
 
     private void Flip()
     {
         isRight = !isRight;
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
+        gameObject.transform.Rotate(0, 180, 0);
+    }
+
+    private void Jump()
+    {
+        anim.SetTrigger("Jump");
+        rb.AddForce(new Vector2(0, jumpForce));
     }
 }
