@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Character : MonoBehaviour
-{ 
+{
+    [SerializeField] private Animator eAnim;
     [SerializeField] private Animator anim;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float speed;
@@ -42,6 +43,22 @@ public class Character : MonoBehaviour
 
         
             
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Usable")
+        {
+            eAnim.SetTrigger("Open");
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Usable")
+        {
+            eAnim.SetTrigger("Close");
+        }
     }
 
     private void Flip()

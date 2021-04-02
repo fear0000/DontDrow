@@ -22,6 +22,7 @@ public class DialogManager : MonoBehaviour
 
     public void StartDiologue(Diologue diologue)
     {
+        Debug.Log("sdfsdpkf,sokdmfisdnf");
         dialogueAnim.SetTrigger("Open");
         nameText.text = diologue.name;
 
@@ -31,7 +32,6 @@ public class DialogManager : MonoBehaviour
         {
             sentences.Enqueue(sentence);
         }
-
         DisplayNextSentence();
     }
 
