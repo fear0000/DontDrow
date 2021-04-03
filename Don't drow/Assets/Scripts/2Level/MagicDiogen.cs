@@ -26,7 +26,6 @@ public class MagicDiogen : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            Debug.Log("Open");
             isUsable = true;
             eAnim.SetTrigger("Open");
         }
@@ -36,7 +35,6 @@ public class MagicDiogen : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            Debug.Log("Close");
             isUsable = false;
             eAnim.SetTrigger("Close");
         }

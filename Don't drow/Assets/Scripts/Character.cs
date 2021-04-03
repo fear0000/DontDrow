@@ -17,6 +17,7 @@ public class Character : MonoBehaviour
     [SerializeField] private float groundRadius;
     private bool isRight = true;
     private bool isGrounded = true;
+
     private void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
@@ -42,6 +43,13 @@ public class Character : MonoBehaviour
         {
             anim.SetBool("isRun", false);
             rb.velocity = new Vector2(0 , rb.velocity.y);
+        }
+
+
+        //РЕСЕТ СОХРАНЕНИЙ УБРАТЬ КОГДА НАДО
+        if (Input.GetKey(KeyCode.M))
+        {
+            PlayerPrefs.DeleteAll();
         }
     }
 
