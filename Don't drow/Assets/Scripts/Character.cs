@@ -1,14 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Character : MonoBehaviour
 {
     [SerializeField] private Animator eAnim;
     [SerializeField] private Animator anim;
+    [SerializeField] private Animator bubbleAnim;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
+    [SerializeField] private float jumperForce;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask whatIsGround;
     [SerializeField] private float groundRadius;
@@ -21,7 +24,7 @@ public class Character : MonoBehaviour
 
         if (Input.GetAxisRaw("Jump") > 0 && isGrounded)
         {
-            Jump();
+            Jump(jumpForce);
             isGrounded = false;
         }
 
@@ -40,9 +43,16 @@ public class Character : MonoBehaviour
             anim.SetBool("isRun", false);
             rb.velocity = new Vector2(0 , rb.velocity.y);
         }
+    }
 
-        
-            
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Govna")
+            Die();
+        if(collision.gameObject.tag == "Jumper")
+        {
+            Jump(jumperForce);
+        }
     }
 
     //private void OnTriggerEnter2D(Collider2D collision)
@@ -60,6 +70,18 @@ public class Character : MonoBehaviour
     //        eAnim.SetTrigger("Close");
     //    }
     //}
+    public void Die()
+    {
+        anim.SetTrigger("Die");
+        bubbleAnim.SetTrigger("Die");
+        StartCoroutine(RestartScene());
+    }
+
+    IEnumerator RestartScene()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 
     private void Flip()
     {
@@ -67,10 +89,10 @@ public class Character : MonoBehaviour
         gameObject.transform.Rotate(0, 180, 0);
     }
 
-    private void Jump()
+    private void Jump(float jumpF)
     {
         anim.SetTrigger("Jump");
-        rb.AddForce(new Vector2(0, jumpForce));
+        rb.AddForce(new Vector2(0, jumpF));
     }
 
 }
