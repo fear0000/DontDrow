@@ -8,6 +8,7 @@ public class DiologueTrigger : MonoBehaviour
 
     public void TriggerDiologue()
     {
+        Debug.Log("jopa");
         FindObjectOfType<DialogManager>().StartDiologue(diologue);
     }
 }

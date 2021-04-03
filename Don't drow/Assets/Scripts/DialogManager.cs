@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class DialogManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI nameText;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private Animator dialogueAnim;
+    public event Action EndDialogue;
+    private bool isRooted;
     //Исправить говно
     public Animator fishAnim;
     public Animator characterAnim;
@@ -18,11 +21,11 @@ public class DialogManager : MonoBehaviour
     private void Start()
     {
         sentences = new Queue<string>();
+        isRooted = true;
     }
 
     public void StartDiologue(Diologue diologue)
     {
-        Debug.Log("sdfsdpkf,sokdmfisdnf");
         dialogueAnim.SetTrigger("Open");
         nameText.text = diologue.name;
 
@@ -59,12 +62,16 @@ public class DialogManager : MonoBehaviour
     }
     public void EndDiologue()
     {
-        //Fix that shit
         dialogueAnim.SetTrigger("Close");
-        fishAnim.SetTrigger("MakeBubble");
         characterAnim.enabled = true;
         character.constraints = RigidbodyConstraints2D.None;
         character.constraints = RigidbodyConstraints2D.FreezeRotation;
-        characterAnim.SetTrigger("MakeBubble");
+        if (isRooted)
+        {
+            fishAnim.SetTrigger("MakeBubble");
+            characterAnim.SetTrigger("MakeBubble");
+            isRooted = !isRooted;
+        }
+        EndDialogue?.Invoke();
     }
 }

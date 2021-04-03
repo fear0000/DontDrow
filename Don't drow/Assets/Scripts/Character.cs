@@ -45,21 +45,21 @@ public class Character : MonoBehaviour
             
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.tag == "Usable")
-        {
-            eAnim.SetTrigger("Open");
-        }
-    }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if(collision.tag == "Usable")
+    //    {
+    //        eAnim.SetTrigger("Open");
+    //    }
+    //}
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag == "Usable")
-        {
-            eAnim.SetTrigger("Close");
-        }
-    }
+    //private void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    if (collision.tag == "Usable")
+    //    {
+    //        eAnim.SetTrigger("Close");
+    //    }
+    //}
 
     private void Flip()
     {
