@@ -63,10 +63,13 @@ public class DialogManager : MonoBehaviour
     public void EndDiologue()
     {
         dialogueAnim.SetTrigger("Close");
-        characterAnim.enabled = true;
-        character.constraints = RigidbodyConstraints2D.None;
-        character.constraints = RigidbodyConstraints2D.FreezeRotation;
-        if (isRooted)
+        if(characterAnim != null)
+        {
+            characterAnim.enabled = true;
+            character.constraints = RigidbodyConstraints2D.None;
+            character.constraints = RigidbodyConstraints2D.FreezeRotation;
+        }
+        if (isRooted && characterAnim != null)
         {
             fishAnim.SetTrigger("MakeBubble");
             characterAnim.SetTrigger("MakeBubble");
