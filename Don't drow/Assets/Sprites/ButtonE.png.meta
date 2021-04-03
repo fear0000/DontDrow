@@ -1,19 +1,7 @@
 fileFormatVersion: 2
-guid: 4fabd3e3fb82b2945b3bab78ac474679
+guid: f092eb5e5bcaf314f8380337ac63ff97
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -4144866965651322929
-    second: RootedMan_0
-  - first:
-      213: 3166530220136886050
-    second: RootedMan_1
-  - first:
-      213: -8092003700647121765
-    second: RootedMan_2
-  - first:
-      213: -9021444953382671614
-    second: RootedMan_3
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -52,12 +40,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -109,91 +97,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: RootedMan_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 23
-        height: 22
-      alignment: 9
-      pivot: {x: 0.49707603, y: 0.5917065}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc70a1784797a76c0800000000000000
-      internalID: -4144866965651322929
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RootedMan_1
-      rect:
-        serializedVersion: 2
-        x: 23
-        y: 0
-        width: 23
-        height: 22
-      alignment: 9
-      pivot: {x: 0.502924, y: 0.58559275}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 22f6ccd4576c1fb20800000000000000
-      internalID: 3166530220136886050
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RootedMan_2
-      rect:
-        serializedVersion: 2
-        x: 46
-        y: 0
-        width: 23
-        height: 22
-      alignment: 9
-      pivot: {x: 0.50584793, y: 0.5886497}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b9c28cde18d63bf80800000000000000
-      internalID: -8092003700647121765
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RootedMan_3
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 0
-        width: 23
-        height: 22
-      alignment: 9
-      pivot: {x: 0.502924, y: 0.5886497}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 20ba2e0dc936dc280800000000000000
-      internalID: -9021444953382671614
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []

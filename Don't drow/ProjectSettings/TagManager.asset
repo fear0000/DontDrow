@@ -6,7 +6,8 @@ TagManager:
   tags:
   - Ground
   - NextScene
-  - Box
+  - Fish
+  - Usable
   layers:
   - Default
   - TransparentFX
