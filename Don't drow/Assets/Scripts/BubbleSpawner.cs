@@ -5,7 +5,6 @@ using UnityEngine;
 public class BubbleSpawner : MonoBehaviour
 {
     [SerializeField] private bool isChanging;
-    [SerializeField] private float power;
     private bool isActive;
     private void Start()
     {
@@ -15,7 +14,6 @@ public class BubbleSpawner : MonoBehaviour
             StartCoroutine(Reload());
         }
     }
-
     private void Update()
     {
         if(!isChanging)
@@ -25,20 +23,6 @@ public class BubbleSpawner : MonoBehaviour
         if (isActive)
         {
             Bubbles();
-        }
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.tag == "Stone")
-        {
-            isChanging = true;
-        }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Stone")
-        {
-            isChanging = false;
         }
     }
     private IEnumerator Reload()
@@ -63,7 +47,7 @@ public class BubbleSpawner : MonoBehaviour
             {
                 if (box.collider.gameObject.tag == "Box")
                 {
-                    box.rigidbody.AddForce(Vector2.up * power);
+                    box.rigidbody.AddForce(Vector2.up * 125);
                 }
             }
         }
