@@ -55,4 +55,5 @@ public class Character : MonoBehaviour
         anim.SetTrigger("Jump");
         rb.AddForce(new Vector2(0, jumpForce));
     }
+
 }
