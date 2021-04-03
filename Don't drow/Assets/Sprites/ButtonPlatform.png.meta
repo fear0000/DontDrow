@@ -1,37 +1,43 @@
 fileFormatVersion: 2
-guid: e3a73fc63d403764cb6ee0670fbafcc6
+guid: 9e9c9027ec9985c4eb744ef01b954af8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3599004515406338009
-    second: Diogen_0
+      213: 9116528980700288006
+    second: ButtonPlatform_0
   - first:
-      213: -3212477246632009641
-    second: Diogen_1
+      213: -2233772217788411788
+    second: ButtonPlatform_1
   - first:
-      213: -7299407926658375132
-    second: Diogen_2
+      213: -3269278074130004242
+    second: ButtonPlatform_2
   - first:
-      213: -7547359728396366718
-    second: Diogen_3
+      213: 8183370498691793242
+    second: ButtonPlatform_3
   - first:
-      213: 1701825507923966927
-    second: Diogen_4
+      213: -8303601636640379016
+    second: ButtonPlatform_4
   - first:
-      213: 2213952006040185242
-    second: Diogen_5
+      213: -2787518500620255311
+    second: ButtonPlatform_5
   - first:
-      213: 7236518222560361785
-    second: Diogen_6
+      213: -2624299859390032133
+    second: ButtonPlatform_6
   - first:
-      213: -3075869452678847414
-    second: Diogen_7
+      213: 6748052323675197372
+    second: ButtonPlatform_7
   - first:
-      213: 3637472388821796098
-    second: Diogen_8
+      213: -3720843287403025999
+    second: ButtonPlatform_8
   - first:
-      213: -7321492658127697520
-    second: Diogen_9
+      213: 243446928086085264
+    second: ButtonPlatform_9
+  - first:
+      213: 4934695751824910295
+    second: ButtonPlatform_10
+  - first:
+      213: -8128635421350746537
+    second: ButtonPlatform_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -129,13 +135,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Diogen_0
+      name: ButtonPlatform_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1
-        width: 15
-        height: 24
+        x: 2
+        y: 51
+        width: 11
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +149,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d752d5d98b32f130800000000000000
-      internalID: 3599004515406338009
+      spriteID: 604d1377eca648e70800000000000000
+      internalID: 9116528980700288006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Diogen_1
+      name: ButtonPlatform_1
       rect:
         serializedVersion: 2
-        x: 40
-        y: 1
-        width: 15
-        height: 24
+        x: 19
+        y: 51
+        width: 11
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,20 +170,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7506971f6fcfa63d0800000000000000
-      internalID: -3212477246632009641
+      spriteID: 470d591c00c0001e0800000000000000
+      internalID: -2233772217788411788
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Diogen_2
+      name: ButtonPlatform_2
       rect:
         serializedVersion: 2
-        x: 72
-        y: 1
-        width: 15
-        height: 23
+        x: 34
+        y: 51
+        width: 11
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,20 +191,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4226bd42a2b43ba90800000000000000
-      internalID: -7299407926658375132
+      spriteID: ee60287b9e031a2d0800000000000000
+      internalID: -3269278074130004242
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Diogen_3
+      name: ButtonPlatform_3
       rect:
         serializedVersion: 2
-        x: 104
-        y: 1
-        width: 15
-        height: 24
+        x: 51
+        y: 51
+        width: 11
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,20 +212,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28c88dc8054624790800000000000000
-      internalID: -7547359728396366718
+      spriteID: a518fe77c1c219170800000000000000
+      internalID: 8183370498691793242
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Diogen_4
+      name: ButtonPlatform_4
       rect:
         serializedVersion: 2
-        x: 136
-        y: 1
-        width: 15
-        height: 24
+        x: 66
+        y: 51
+        width: 11
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,20 +233,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcbb18568491e9710800000000000000
-      internalID: 1701825507923966927
+      spriteID: 87fa2bb4e4ea3cc80800000000000000
+      internalID: -8303601636640379016
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Diogen_5
+      name: ButtonPlatform_5
       rect:
         serializedVersion: 2
-        x: 168
-        y: 1
-        width: 15
-        height: 24
+        x: 83
+        y: 51
+        width: 11
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,20 +254,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a99e9c59e9989be10800000000000000
-      internalID: 2213952006040185242
+      spriteID: 1bf33bd41beb059d0800000000000000
+      internalID: -2787518500620255311
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Diogen_6
+      name: ButtonPlatform_6
       rect:
         serializedVersion: 2
-        x: 200
-        y: 1
-        width: 15
-        height: 24
+        x: 98
+        y: 51
+        width: 11
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -269,20 +275,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93df9529bf64d6460800000000000000
-      internalID: 7236518222560361785
+      spriteID: bf613f89e2d949bd0800000000000000
+      internalID: -2624299859390032133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Diogen_7
+      name: ButtonPlatform_7
       rect:
         serializedVersion: 2
-        x: 232
-        y: 1
-        width: 15
-        height: 24
+        x: 115
+        y: 51
+        width: 11
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -290,20 +296,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a442a9987015055d0800000000000000
-      internalID: -3075869452678847414
+      spriteID: cbfc86ee5d5e5ad50800000000000000
+      internalID: 6748052323675197372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Diogen_8
+      name: ButtonPlatform_8
       rect:
         serializedVersion: 2
-        x: 264
-        y: 1
-        width: 15
-        height: 24
+        x: 0
+        y: 32
+        width: 64
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -311,20 +317,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 205c3009dd5ea7230800000000000000
-      internalID: 3637472388821796098
+      spriteID: 1b922757eb8ec5cc0800000000000000
+      internalID: -3720843287403025999
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Diogen_9
+      name: ButtonPlatform_9
       rect:
         serializedVersion: 2
-        x: 296
-        y: 1
-        width: 15
-        height: 24
+        x: 98
+        y: 35
+        width: 11
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -332,8 +338,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0990ba6e735d46a90800000000000000
-      internalID: -7321492658127697520
+      spriteID: 09e2b36f0b5e06300800000000000000
+      internalID: 243446928086085264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonPlatform_10
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 35
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d7272224af8b7440800000000000000
+      internalID: 4934695751824910295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonPlatform_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7562bb1d629413f80800000000000000
+      internalID: -8128635421350746537
       vertices: []
       indices: 
       edges: []
