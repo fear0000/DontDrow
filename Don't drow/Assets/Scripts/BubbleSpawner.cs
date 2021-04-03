@@ -47,7 +47,7 @@ public class BubbleSpawner : MonoBehaviour
             {
                 if (box.collider.gameObject.tag == "Box")
                 {
-                    box.rigidbody.AddForce(Vector2.up * 100);
+                    box.rigidbody.AddForce(Vector2.up * 125);
                 }
             }
         }
