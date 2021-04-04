@@ -15,7 +15,7 @@ public class BoadMoving : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
         audioSorce = gameObject.GetComponent<AudioSource>();
     }
-    private void Start()
+    public void Move()
     {
         rb.velocity = Vector3.right * speed;
     }

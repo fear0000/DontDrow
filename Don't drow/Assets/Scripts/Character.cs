@@ -16,10 +16,12 @@ public class Character : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask whatIsGround;
     [SerializeField] private float groundRadius;
+    [SerializeField] private AudioSource audioSource;
     private bool isRight = true;
     private bool isGrounded = true;
     private void Start()
     {
+        audioSource = gameObject.GetComponent<AudioSource>();
         //darkAnim.SetTrigger("isLight");
     }
     private void FixedUpdate()
@@ -66,24 +68,9 @@ public class Character : MonoBehaviour
             Jump(jumperForce);
         }
     }
-
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if(collision.tag == "Usable")
-    //    {
-    //        eAnim.SetTrigger("Open");
-    //    }
-    //}
-
-    //private void OnTriggerExit2D(Collider2D collision)
-    //{
-    //    if (collision.tag == "Usable")
-    //    {
-    //        eAnim.SetTrigger("Close");
-    //    }
-    //}
     public void Die()
     {
+        audioSource.Play();
         anim.SetTrigger("Die");
         bubbleAnim.SetTrigger("Die");
         StartCoroutine(RestartScene());
@@ -95,21 +82,6 @@ public class Character : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if(collision.tag == "Usable")
-    //    {
-    //        eAnim.SetTrigger("Open");
-    //    }
-    //}
-
-    //private void OnTriggerExit2D(Collider2D collision)
-    //{
-    //    if (collision.tag == "Usable")
-    //    {
-    //        eAnim.SetTrigger("Close");
-    //    }
-    //}
 
     private void Flip()
     {

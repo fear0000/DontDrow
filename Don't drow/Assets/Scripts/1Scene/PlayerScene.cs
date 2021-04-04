@@ -6,12 +6,21 @@ using UnityEngine;
 public class PlayerScene : MonoBehaviour
 {
     [SerializeField] private Animator animDark;
+    [SerializeField] private BoadMoving bm;
+    [SerializeField] Animator buttom;
+    [SerializeField] Animator logo;
     private Animator anim;
     private AudioSource audioSorce;
     private void Awake()
     {
         anim = gameObject.GetComponent<Animator>();
         audioSorce = gameObject.GetComponent<AudioSource>();
+    }
+    public void StartGame()
+    {
+        bm.Move();
+        logo.SetTrigger("Off");
+        buttom.SetTrigger("Off");
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

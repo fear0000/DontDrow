@@ -10,6 +10,7 @@ public class DialogManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI nameText;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private Animator dialogueAnim;
+    [SerializeField] private AudioSource audioSource;
     public event Action EndDialogue;
     public GameObject key;
     public Transform keyKeeper;
@@ -46,7 +47,11 @@ public class DialogManager : MonoBehaviour
     {
         if (!Input.GetKey(KeyCode.Space))
         {
-            if(sentences.Count == 0)
+            if (sentences.Count != 0)
+            {
+                audioSource.Play();
+            }
+            if (sentences.Count == 0)
                 {
                     isEnd = true;
                     EndDiologue();
