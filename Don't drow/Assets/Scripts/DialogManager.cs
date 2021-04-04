@@ -11,6 +11,8 @@ public class DialogManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private Animator dialogueAnim;
     public event Action EndDialogue;
+    public GameObject key;
+    public Transform keyKeeper;
     private bool isRooted;
     //Исправить говно
     public Animator fishAnim;
@@ -40,15 +42,19 @@ public class DialogManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        if(sentences.Count == 0)
+        if (!Input.GetKey(KeyCode.Space))
         {
-            EndDiologue();
-            return;
-        }
+            if(sentences.Count == 0)
+                {
+                    EndDiologue();
+                    return;
+                }
 
-        string sentence = sentences.Dequeue();
-        StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
+            string sentence = sentences.Dequeue();
+            StopAllCoroutines();
+            StartCoroutine(TypeSentence(sentence));
+        }
+        
     }
 
     IEnumerator TypeSentence(string sentence)
@@ -74,6 +80,10 @@ public class DialogManager : MonoBehaviour
             fishAnim.SetTrigger("MakeBubble");
             characterAnim.SetTrigger("MakeBubble");
             isRooted = !isRooted;
+        }
+        if(key != null)
+        {
+            Instantiate(key, keyKeeper);
         }
         EndDialogue?.Invoke();
     }

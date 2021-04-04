@@ -9,6 +9,10 @@ TagManager:
   - Box
   - Govna
   - Jumper
+  - Barier
+  - Button
+  - Stone
+  - Door
   layers:
   - Default
   - TransparentFX

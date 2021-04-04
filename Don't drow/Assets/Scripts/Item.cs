@@ -48,7 +48,7 @@ public class Item : MonoBehaviour
         }
     }
 
-    private void CatchItem()
+    public virtual void CatchItem()
     {
         playerAnim.SetTrigger("Catch");
         gameObject.transform.SetParent(playerTransform);

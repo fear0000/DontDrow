@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class MagicDiogen : MonoBehaviour
 {
-    [SerializeField] private DialogManager dm;
-    [SerializeField] private Diologue startDiologue;
-    [SerializeField] private Diologue constantDiologue;
-    [SerializeField] private Diologue helpDiologue;
+    [SerializeField] public DialogManager dm;
+    [SerializeField] public Diologue startDiologue;
+    [SerializeField] public Diologue constantDiologue;
+    [SerializeField] public Diologue helpDiologue;
     [SerializeField] private Animator eAnim;
-    private bool isUsable;
-    private bool firstDialog;
-    private bool isTalking;
+    public bool isUsable;
+    public bool firstDialog;
+    public bool isTalking;
     private void Start()
     {
         dm.EndDialogue += OnEndDialogue;
@@ -39,7 +39,7 @@ public class MagicDiogen : MonoBehaviour
             eAnim.SetTrigger("Close");
         }
     }
-    private void Update()
+    public virtual void Update()
     {
         if (Input.GetKey(KeyCode.E) && isUsable && !isTalking)
         {
