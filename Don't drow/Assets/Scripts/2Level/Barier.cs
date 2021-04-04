@@ -35,10 +35,12 @@ public class Barier : MonoBehaviour
                 if (item.activeSelf)
                 {
                     item.SetActive(false);
+                    item.GetComponent<BoxCollider2D>().enabled = false;
                 }
                 else
                 {
                     item.SetActive(true);
+                    item.GetComponent<BoxCollider2D>().enabled = true;
                 }
             }
         }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class BubbleSpawner : MonoBehaviour
 {
     [SerializeField] private bool isChanging;
+    [SerializeField] private AudioSource audioSource;
     [SerializeField] private float power;
     [SerializeField] private ParticleSystem ps;
     private bool isActive;
@@ -35,6 +36,7 @@ public class BubbleSpawner : MonoBehaviour
             if (ps.isPlaying)
             {
                 ps.Stop();
+                audioSource.enabled = false;
             }
             isChanging = true;
         }
@@ -46,6 +48,7 @@ public class BubbleSpawner : MonoBehaviour
             if (ps.isStopped)
             {
                 ps.Play();
+                audioSource.enabled = true;
             }
             isChanging = false;
         }
@@ -55,6 +58,7 @@ public class BubbleSpawner : MonoBehaviour
         if (ps.isPlaying)
         {
             ps.Stop();
+            audioSource.enabled = false;
         }
         yield return new WaitForSeconds(5f);
         isActive = !isActive;
@@ -70,6 +74,7 @@ public class BubbleSpawner : MonoBehaviour
     {
         if (ps.isStopped)
         {
+            audioSource.enabled = true;
             ps.Play();
         }
         Debug.DrawRay(gameObject.transform.position, transform.up * 25f, Color.red);
