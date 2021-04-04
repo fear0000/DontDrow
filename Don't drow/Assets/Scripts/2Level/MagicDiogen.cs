@@ -44,11 +44,9 @@ public class MagicDiogen : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.E) && isUsable && !isTalking)
         {
-            Debug.Log(1);
             isTalking = true;
             if (!firstDialog)
             {
-                Debug.Log(2);
                 dm.StartDiologue(startDiologue);
                 firstDialog = true;
             }

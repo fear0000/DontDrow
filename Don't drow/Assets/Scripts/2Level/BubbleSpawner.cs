@@ -66,7 +66,7 @@ public class BubbleSpawner : MonoBehaviour
     }
     private IEnumerator Shot()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2.5f);
         isActive = !isActive;
         StartCoroutine(Reload());
     }
