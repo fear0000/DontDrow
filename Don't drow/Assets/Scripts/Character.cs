@@ -8,6 +8,7 @@ public class Character : MonoBehaviour
     [SerializeField] private Animator eAnim;
     [SerializeField] private Animator anim;
     [SerializeField] private Animator bubbleAnim;
+    //[SerializeField] private Animator darkAnim;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
@@ -17,7 +18,10 @@ public class Character : MonoBehaviour
     [SerializeField] private float groundRadius;
     private bool isRight = true;
     private bool isGrounded = true;
-
+    private void Start()
+    {
+        //darkAnim.SetTrigger("isLight");
+    }
     private void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
@@ -43,13 +47,6 @@ public class Character : MonoBehaviour
         {
             anim.SetBool("isRun", false);
             rb.velocity = new Vector2(0 , rb.velocity.y);
-        }
-
-
-        //РЕСЕТ СОХРАНЕНИЙ УБРАТЬ КОГДА НАДО
-        if (Input.GetKey(KeyCode.M))
-        {
-            PlayerPrefs.DeleteAll();
         }
     }
 

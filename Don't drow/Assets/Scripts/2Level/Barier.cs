@@ -32,15 +32,13 @@ public class Barier : MonoBehaviour
             }
             if (item.tag == "Button")
             {
-                if (item.GetComponent<BoxCollider2D>().enabled)
+                if (item.activeSelf)
                 {
-                    item.GetComponent<SpriteRenderer>().sprite = onOffButton[1];
-                    item.GetComponent<BoxCollider2D>().enabled = false;
+                    item.SetActive(false);
                 }
                 else
                 {
-                    item.GetComponent<SpriteRenderer>().sprite = onOffButton[0];
-                    item.GetComponent<BoxCollider2D>().enabled = true;
+                    item.SetActive(true);
                 }
             }
         }
