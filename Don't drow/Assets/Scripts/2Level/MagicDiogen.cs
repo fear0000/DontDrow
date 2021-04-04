@@ -12,6 +12,7 @@ public class MagicDiogen : MonoBehaviour
     public bool isUsable;
     public bool firstDialog;
     public bool isTalking;
+    
     private void Start()
     {
         dm.EndDialogue += OnEndDialogue;

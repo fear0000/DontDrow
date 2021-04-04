@@ -23,9 +23,15 @@ public class Pipiga : MagicDiogen
             else
             {
                 if (hat.activeSelf)
+                {
                     dm.StartDiologue(constantDiologue);
+                    hat.SetActive(false);
+                }
                 else if (crown.activeSelf)
+                {
                     dm.StartDiologue(getCrown);
+                    crown.SetActive(false);
+                }
                 else
                     dm.StartDiologue(whyAreYouCame);
             }

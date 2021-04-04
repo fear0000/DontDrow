@@ -14,6 +14,8 @@ public class DialogManager : MonoBehaviour
     public GameObject key;
     public Transform keyKeeper;
     private bool isRooted;
+    public bool isKey;
+    private bool isEnd = false;
     //Исправить говно
     public Animator fishAnim;
     public Animator characterAnim;
@@ -46,6 +48,7 @@ public class DialogManager : MonoBehaviour
         {
             if(sentences.Count == 0)
                 {
+                    isEnd = true;
                     EndDiologue();
                     return;
                 }
@@ -68,7 +71,13 @@ public class DialogManager : MonoBehaviour
     }
     public void EndDiologue()
     {
-        dialogueAnim.SetTrigger("Close");
+        if (isEnd)
+        {
+            Debug.Log("asda");
+            dialogueAnim.SetTrigger("Close");
+            isEnd = false;
+        }
+        
         if(characterAnim != null)
         {
             characterAnim.enabled = true;
@@ -81,9 +90,9 @@ public class DialogManager : MonoBehaviour
             characterAnim.SetTrigger("MakeBubble");
             isRooted = !isRooted;
         }
-        if(key != null)
+        if(key != null && isKey)
         {
-            Instantiate(key, keyKeeper);
+            key.SetActive(true);
         }
         EndDialogue?.Invoke();
     }

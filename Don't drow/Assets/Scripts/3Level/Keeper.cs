@@ -16,4 +16,10 @@ public class Keeper : DiologueTrigger
         }
             
     }
+
+    public override void TriggerDiologue()
+    {
+        FindObjectOfType<DialogManager>().StartDiologue(diologue);
+        FindObjectOfType<DialogManager>().isKey = true;
+    }
 }
