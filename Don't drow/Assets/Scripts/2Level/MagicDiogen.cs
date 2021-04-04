@@ -9,6 +9,7 @@ public class MagicDiogen : MonoBehaviour
     [SerializeField] private Diologue constantDiologue;
     [SerializeField] private Diologue helpDiologue;
     [SerializeField] private Animator eAnim;
+    [SerializeField] private Animator dioAnim;
     private bool isUsable;
     private bool firstDialog;
     private bool isTalking;
@@ -26,7 +27,6 @@ public class MagicDiogen : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            Debug.Log("Open");
             isUsable = true;
             eAnim.SetTrigger("Open");
         }
@@ -36,7 +36,6 @@ public class MagicDiogen : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            Debug.Log("Close");
             isUsable = false;
             eAnim.SetTrigger("Close");
         }
@@ -45,11 +44,9 @@ public class MagicDiogen : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.E) && isUsable && !isTalking)
         {
-            Debug.Log(1);
             isTalking = true;
             if (!firstDialog)
             {
-                Debug.Log(2);
                 dm.StartDiologue(startDiologue);
                 firstDialog = true;
             }

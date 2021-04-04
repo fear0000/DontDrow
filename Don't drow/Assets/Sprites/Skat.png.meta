@@ -1,37 +1,43 @@
 fileFormatVersion: 2
-guid: e3a73fc63d403764cb6ee0670fbafcc6
+guid: 04b8f72154cd33b4190836208f8c4eab
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3599004515406338009
-    second: Diogen_0
+      213: 2670302782993838741
+    second: Skat_0
   - first:
-      213: -3212477246632009641
-    second: Diogen_1
+      213: 3224746603217008193
+    second: Skat_1
   - first:
-      213: -7299407926658375132
-    second: Diogen_2
+      213: 3239949131709965206
+    second: Skat_2
   - first:
-      213: -7547359728396366718
-    second: Diogen_3
+      213: 6482717544477848215
+    second: Skat_3
   - first:
-      213: 1701825507923966927
-    second: Diogen_4
+      213: -2024055074157215710
+    second: Skat_4
   - first:
-      213: 2213952006040185242
-    second: Diogen_5
+      213: -2753316293749670740
+    second: Skat_5
   - first:
-      213: 7236518222560361785
-    second: Diogen_6
+      213: 1124096782261800701
+    second: Skat_6
   - first:
-      213: -3075869452678847414
-    second: Diogen_7
+      213: -1363378633845290880
+    second: Skat_7
   - first:
-      213: 3637472388821796098
-    second: Diogen_8
+      213: -6666503486417729034
+    second: Skat_8
   - first:
-      213: -7321492658127697520
-    second: Diogen_9
+      213: 185637636634500204
+    second: Skat_9
+  - first:
+      213: 596213242722813820
+    second: Skat_10
+  - first:
+      213: 6750224731428793384
+    second: Skat_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -75,7 +81,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -129,211 +135,253 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Diogen_0
+      name: Skat_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1
-        width: 15
-        height: 24
+        x: 0
+        y: 0
+        width: 100
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d752d5d98b32f130800000000000000
-      internalID: 3599004515406338009
+      spriteID: 592b517bb32de0520800000000000000
+      internalID: 2670302782993838741
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Diogen_1
+      name: Skat_1
       rect:
         serializedVersion: 2
-        x: 40
-        y: 1
-        width: 15
-        height: 24
+        x: 100
+        y: 0
+        width: 100
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7506971f6fcfa63d0800000000000000
-      internalID: -3212477246632009641
+      spriteID: 146b56f33f990cc20800000000000000
+      internalID: 3224746603217008193
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Diogen_2
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 1
-        width: 15
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4226bd42a2b43ba90800000000000000
-      internalID: -7299407926658375132
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Diogen_3
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 1
-        width: 15
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 28c88dc8054624790800000000000000
-      internalID: -7547359728396366718
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Diogen_4
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 1
-        width: 15
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fcbb18568491e9710800000000000000
-      internalID: 1701825507923966927
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Diogen_5
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 1
-        width: 15
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a99e9c59e9989be10800000000000000
-      internalID: 2213952006040185242
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Diogen_6
+      name: Skat_2
       rect:
         serializedVersion: 2
         x: 200
-        y: 1
-        width: 15
-        height: 24
+        y: 0
+        width: 100
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93df9529bf64d6460800000000000000
-      internalID: 7236518222560361785
+      spriteID: 69368edb19c96fc20800000000000000
+      internalID: 3239949131709965206
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Diogen_7
+      name: Skat_3
       rect:
         serializedVersion: 2
-        x: 232
-        y: 1
-        width: 15
-        height: 24
+        x: 300
+        y: 0
+        width: 100
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a442a9987015055d0800000000000000
-      internalID: -3075869452678847414
+      spriteID: 7927bc1824d37f950800000000000000
+      internalID: 6482717544477848215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Diogen_8
+      name: Skat_4
       rect:
         serializedVersion: 2
-        x: 264
-        y: 1
-        width: 15
-        height: 24
+        x: 400
+        y: 0
+        width: 100
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 205c3009dd5ea7230800000000000000
-      internalID: 3637472388821796098
+      spriteID: 220480b42ac19e3e0800000000000000
+      internalID: -2024055074157215710
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Diogen_9
+      name: Skat_5
       rect:
         serializedVersion: 2
-        x: 296
-        y: 1
-        width: 15
-        height: 24
+        x: 500
+        y: 0
+        width: 100
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0990ba6e735d46a90800000000000000
-      internalID: -7321492658127697520
+      spriteID: cac71c42b614ac9d0800000000000000
+      internalID: -2753316293749670740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skat_6
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 100
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfecfd75118999f00800000000000000
+      internalID: 1124096782261800701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skat_7
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 100
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0884b432b5e441de0800000000000000
+      internalID: -1363378633845290880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skat_8
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 100
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f90b265662db73a0800000000000000
+      internalID: -6666503486417729034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skat_9
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 100
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6cda8c6274839200800000000000000
+      internalID: 185637636634500204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skat_10
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 100
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7780ee09cc264800800000000000000
+      internalID: 596213242722813820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skat_11
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 0
+        width: 100
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82caed601ad9dad50800000000000000
+      internalID: 6750224731428793384
       vertices: []
       indices: 
       edges: []
