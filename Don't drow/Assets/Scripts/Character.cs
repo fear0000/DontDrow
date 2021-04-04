@@ -22,7 +22,6 @@ public class Character : MonoBehaviour
     private void Start()
     {
         audioSource = gameObject.GetComponent<AudioSource>();
-        //darkAnim.SetTrigger("isLight");
     }
     private void FixedUpdate()
     {

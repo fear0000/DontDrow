@@ -13,6 +13,7 @@ public class PlayerScene : MonoBehaviour
     private AudioSource audioSorce;
     private void Awake()
     {
+        PlayerPrefs.DeleteAll();
         anim = gameObject.GetComponent<Animator>();
         audioSorce = gameObject.GetComponent<AudioSource>();
     }

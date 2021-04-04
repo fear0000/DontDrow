@@ -4,38 +4,44 @@ using UnityEngine;
 
 public class PanelLoading : MonoBehaviour
 {
-    [SerializeField] private GameObject book;
-    [SerializeField] private GameObject sock;
-    [SerializeField] private GameObject hat;
     [SerializeField] private GameObject crown;
-    [SerializeField] private GameObject flash;
-    [SerializeField] private GameObject bottle;
+    [SerializeField] private GameObject hat;
+    [SerializeField] private GameObject juice;
+    [SerializeField] private GameObject bred;
 
-    private void Start()
+    private void Update()
     {
-        if(PlayerPrefs.GetInt("Book") == 1)
-        {
-            book.SetActive(true);
-        }
-        if (PlayerPrefs.GetInt("Sock") == 1)
-        {
-            sock.SetActive(true);
-        }
-        if (PlayerPrefs.GetInt("Hat") == 1)
-        {
-            hat.SetActive(true);
-        }
-        if(PlayerPrefs.GetInt("Crown") == 1)
+        if (PlayerPrefs.GetString("crown") == "on")
         {
             crown.SetActive(true);
         }
-        if (PlayerPrefs.GetInt("Flash") == 1)
+        else
         {
-            flash.SetActive(true);
+            crown.SetActive(false);
         }
-        if(PlayerPrefs.GetInt("Bottle") == 1)
+        if (PlayerPrefs.GetString("bred") == "on")
         {
-            bottle.SetActive(true);
+            bred.SetActive(true);
+        }
+        else
+        {
+            bred.SetActive(false);
+        }
+        if (PlayerPrefs.GetString("juice") == "on")
+        {
+            juice.SetActive(true);
+        }
+        else
+        {
+            juice.SetActive(false);
+        }
+        if (PlayerPrefs.GetString("hat") == "on")
+        {
+            hat.SetActive(true);
+        }
+        else
+        {
+            hat.SetActive(false);
         }
     }
 }

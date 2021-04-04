@@ -7,21 +7,14 @@ public class Item : MonoBehaviour
     [SerializeField] private Animator eAnim;
     [SerializeField] private Animator playerAnim;
     [SerializeField] private Transform playerTransform;
-    [SerializeField] private Transform panelTransform;
-    [SerializeField] private GameObject itemOnPanel;
-
-    public string nameOfItem;
-
     private bool isUsable;
-
-
-    private void Awake()
+    private void Start()
     {
-        if(PlayerPrefs.GetInt(nameOfItem) == 1)
-        {
-            Destroy(gameObject);
-        }
+        var player = GameObject.FindGameObjectWithTag("Player");
+        playerAnim = player.GetComponent<Animator>();
+        playerTransform = player.GetComponent<Transform>();
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
@@ -50,22 +43,29 @@ public class Item : MonoBehaviour
 
     public virtual void CatchItem()
     {
+        if(gameObject.tag == "crown")
+        {
+            PlayerPrefs.SetString("crown", "on");
+        }
+        if (gameObject.tag == "hat")
+        {
+            PlayerPrefs.SetString("hat", "on");
+        }
+        if (gameObject.tag == "bred")
+        {
+            PlayerPrefs.SetString("bred", "on");
+        }
+        if (gameObject.tag == "juice")
+        {
+            PlayerPrefs.SetString("juice", "on");
+        }
         playerAnim.SetTrigger("Catch");
-        gameObject.transform.SetParent(playerTransform);
         StartCoroutine(GoToPanel());
     }
 
     IEnumerator GoToPanel()
     {
-        yield return new WaitForSeconds(1f);
-        Save();
-        itemOnPanel.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
         Destroy(gameObject);
-    }
-
-    public void Save()
-    {
-        PlayerPrefs.SetInt(nameOfItem, 1);
-        PlayerPrefs.SetInt("Count", PlayerPrefs.GetInt("Count") + 1);
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pipiga
+public class NewPepega : MonoBehaviour
 {
     [SerializeField] public DialogManager dm;
     [SerializeField] private Animator eAnim;
@@ -41,7 +41,7 @@ public class Pipiga
                     dm.StartDiologue(hatDiologue);
                     PlayerPrefs.SetString("hat", "off");
                 }
-                else if (PlayerPrefs.GetString("hat") == "on")
+                else if (PlayerPrefs.GetString("crown") == "on")
                 {
                     dm.StartDiologue(getCrown);
                     PlayerPrefs.SetString("crown", "off");

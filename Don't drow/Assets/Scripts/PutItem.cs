@@ -9,14 +9,18 @@ public class PutItem : MonoBehaviour
     public Animator characterAnim;
     public Animator panelAnim;
     public DialogManager dm;
-    public GameObject item;
+    public GameObject bred;
+    public GameObject juice;
     public Animator diologAnim;
-
+    public BoxCollider2D bx;
+    public static bool isBred;
+    public static bool isJuice;
 
     public Diologue dialog;
     private void Start()
     {
-        Debug.Log(PlayerPrefs.GetInt("Count"));
+        isBred = false;
+        isJuice = false;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -41,35 +45,47 @@ public class PutItem : MonoBehaviour
     {
         if (isUsable && Input.GetKey(KeyCode.E))
         {
-            item.transform.SetParent(transform);
+            if (PlayerPrefs.GetString("bred") != "on" && PlayerPrefs.GetString("juice") != "on")
+            {
+                StartCoroutine(FirstEnding());
+            }
+            if (PlayerPrefs.GetString("bred") == "on")
+            {
+                bred.SetActive(true);
+                PlayerPrefs.SetString("bred", "off");
+                isBred = true;
+                if(PlayerPrefs.GetString("juice") != "on")
+                {
+                    StartCoroutine(FirstEnding());
+                }
+            }
+            else if(PlayerPrefs.GetString("juice") == "on")
+            {
+                juice.SetActive(true);
+                PlayerPrefs.SetString("juice", "off");
+                isJuice = true;
+                if (PlayerPrefs.GetString("bred") != "on")
+                {
+                    StartCoroutine(FirstEnding());
+                }
+            }
+            bx.enabled = false;
+            isUsable = false;
             eAnim.SetTrigger("Close");
-            Put();
-        }
-    }
-
-    private void Put()
-    {
-        PlayerPrefs.SetInt("I", PlayerPrefs.GetInt("I") + 1);
-        if(PlayerPrefs.GetInt("Count") == PlayerPrefs.GetInt("I") && PlayerPrefs.GetInt("Count") == 1)
-        {
-            StartCoroutine(FirstEnding());
-        }
-        else if(PlayerPrefs.GetInt("Count") == PlayerPrefs.GetInt("I") && PlayerPrefs.GetInt("Count") == 2)
-        {
-            dm.StartDiologue(dialog);
         }
     }
     public void SecondEnding()
     {
         diologAnim.SetTrigger("Close");
         panelAnim.SetTrigger("SecondEnding");
+
     }
     public void StartFirstCoroutine()
     {
         diologAnim.SetTrigger("Close");
         StartCoroutine(FirstEnding());
     }
-    IEnumerator FirstEnding()
+    private IEnumerator FirstEnding()
     {
         characterAnim.SetTrigger("Off");
         yield return new WaitForSeconds(5f);
