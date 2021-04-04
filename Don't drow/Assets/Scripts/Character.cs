@@ -48,6 +48,13 @@ public class Character : MonoBehaviour
             anim.SetBool("isRun", false);
             rb.velocity = new Vector2(0 , rb.velocity.y);
         }
+
+
+        //РЕСЕТ ГОВНА
+        if (Input.GetKey(KeyCode.M))
+        {
+            PlayerPrefs.DeleteAll();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

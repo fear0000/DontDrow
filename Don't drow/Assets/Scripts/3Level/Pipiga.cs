@@ -8,6 +8,8 @@ public class Pipiga : MagicDiogen
     public GameObject crown;
     public Diologue getCrown;
     public Diologue whyAreYouCame;
+    public BoxCollider2D bx;
+    public GameObject bottleOfUrine;
     public override void Update()
     {
         if (Input.GetKey(KeyCode.E) && isUsable && !isTalking)
@@ -26,11 +28,14 @@ public class Pipiga : MagicDiogen
                 {
                     dm.StartDiologue(constantDiologue);
                     hat.SetActive(false);
+                    bx.enabled = false;
                 }
                 else if (crown.activeSelf)
                 {
                     dm.StartDiologue(getCrown);
                     crown.SetActive(false);
+                    bx.enabled = false;
+                    bottleOfUrine.SetActive(true);
                 }
                 else
                     dm.StartDiologue(whyAreYouCame);

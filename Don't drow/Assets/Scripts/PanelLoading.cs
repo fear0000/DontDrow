@@ -9,6 +9,7 @@ public class PanelLoading : MonoBehaviour
     [SerializeField] private GameObject hat;
     [SerializeField] private GameObject crown;
     [SerializeField] private GameObject flash;
+    [SerializeField] private GameObject bottle;
 
     private void Start()
     {
@@ -31,6 +32,10 @@ public class PanelLoading : MonoBehaviour
         if (PlayerPrefs.GetInt("Book") == 1)
         {
             flash.SetActive(true);
+        }
+        if(PlayerPrefs.GetInt("Bottle") == 1)
+        {
+            bottle.SetActive(true);
         }
     }
 }
