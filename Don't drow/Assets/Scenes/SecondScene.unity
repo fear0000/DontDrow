@@ -3716,7 +3716,7 @@ MonoBehaviour:
   leftLimit: -3
   rightLimit: 19
   bottomLimit: -11.5
-  upLimit: 0
+  upLimit: 2
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -18503,7 +18503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isChanging: 1
   audioSource: {fileID: 658147637}
-  power: 100
+  power: 250
   ps: {fileID: 617836028}
 --- !u!4 &658147640
 Transform:
@@ -32019,7 +32019,7 @@ PrefabInstance:
     - target: {fileID: 2113118731511340138, guid: cf08379fdd17ffe41a274b8bc0656035,
         type: 3}
       propertyPath: m_LinearDrag
-      value: 1
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2113118731511340138, guid: cf08379fdd17ffe41a274b8bc0656035,
         type: 3}
