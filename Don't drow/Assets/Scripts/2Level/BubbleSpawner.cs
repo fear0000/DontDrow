@@ -83,7 +83,7 @@ public class BubbleSpawner : MonoBehaviour
             var boxes = Physics2D.RaycastAll(transform.position, Vector2.up);
             foreach (var box in boxes)
             {
-                if (box.collider.gameObject.tag == "Box")
+                if (box.collider.gameObject.tag == "Box" || box.collider.gameObject.tag == "ItemBox")
                 {
                     box.rigidbody.AddForce(Vector2.up * power);
                 }

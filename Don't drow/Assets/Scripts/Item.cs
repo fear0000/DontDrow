@@ -66,5 +66,6 @@ public class Item : MonoBehaviour
     public void Save()
     {
         PlayerPrefs.SetInt(nameOfItem, 1);
+        PlayerPrefs.SetInt("Count", PlayerPrefs.GetInt("Count") + 1);
     }
 }

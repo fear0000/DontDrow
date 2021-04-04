@@ -13,6 +13,8 @@ TagManager:
   - Button
   - Stone
   - Door
+  - NextScene
+  - ItemBox
   layers:
   - Default
   - TransparentFX

@@ -9,6 +9,7 @@ public class Fish : MonoBehaviour
     [SerializeField] private SpriteRenderer sr;
     [SerializeField] private Character character;
     [SerializeField] private Animator anim;
+    [SerializeField] private Animator itemBoxAnim;
     private Vector2 direction;
     private bool isRight;
     private void Start()
@@ -25,7 +26,13 @@ public class Fish : MonoBehaviour
             Destroy(collision.gameObject);
             anim.SetTrigger("Attack");
         }
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "ItemBox")
+        {
+            itemBoxAnim.SetTrigger("Broke");
+            anim.SetTrigger("Attack");
+        }
+
+        if (collision.gameObject.tag == "Player")
         {
             character.Die();
             anim.SetTrigger("Attack");

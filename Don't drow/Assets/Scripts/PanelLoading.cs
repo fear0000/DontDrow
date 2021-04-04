@@ -29,7 +29,7 @@ public class PanelLoading : MonoBehaviour
         {
             crown.SetActive(true);
         }
-        if (PlayerPrefs.GetInt("Book") == 1)
+        if (PlayerPrefs.GetInt("Flash") == 1)
         {
             flash.SetActive(true);
         }
